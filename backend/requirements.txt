@@ -1,0 +1,14 @@
+flask
+flask-cors
+sqlalchemy
+psycopg2-binary
+alembic
+
+langchain
+langchain-community
+langchain-huggingface
+faiss-cpu      # or chromadb
+openai         # or other LLM provider
+
+pypdf
+python-dotenv
