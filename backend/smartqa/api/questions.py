@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from smartqa.rag.question_service import ask_question
+from smartqa.rag.rag_service import generate_answer
 
 questions_bp = Blueprint("questions", __name__)
 
@@ -12,7 +12,7 @@ def handle_ask_question():
         return jsonify({"error": "question is required"}), 400
 
     try:
-        response_data = ask_question(question)
+        response_data = generate_answer(question)
         
         if "error" in response_data:
              return jsonify(response_data), 400
