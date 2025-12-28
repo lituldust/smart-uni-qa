@@ -1,5 +1,5 @@
 from flask import jsonify
-from get_response import get_response
+from smartqa.rag.get_response import get_response
 
 def ask_question(question):
     if not question:
@@ -15,16 +15,3 @@ def ask_question(question):
         "answer": result["answer"], 
         "sources": formatted_sources
     }
-
-if __name__ == "__main__":
-    print("--- Testing RAG Pipeline Manually ---")
-    test_q = "What is Python used for?"
-    
-    # We call the LOGIC function directly to avoid Flask 'jsonify' errors
-    response_data = ask_question(test_q)
-    
-    print(f"\nQ: {test_q}")
-    print(f"A: {response_data['answer']}")
-    print("\nSources:")
-    for s in response_data['sources']:
-        print(f"- {s['content']} (Page {s['metadata']['page']})")

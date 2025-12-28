@@ -1,5 +1,5 @@
-from vectorstore import get_vectorstore
-from generate_response import generate_augmented_response
+from smartqa.rag.vectorstore import get_vectorstore
+from smartqa.rag.generate_response import generate_augmented_response
 
 def get_response(query):
     vectorstore = get_vectorstore()
