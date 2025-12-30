@@ -5,11 +5,16 @@ psycopg2-binary
 alembic
 
 langchain
+langchain-text-splitters
 langchain-community
 langchain-huggingface
 sentence-transformers
 faiss-cpu      # or chromadb
 openai         # or other LLM provider
 
-pypdf
+pypdf             # For PDFs
+pdfplumber        # Better PDF text extraction
+python-docx       # For Word docs
+python-pptx       # For PowerPoint
+werkzeug          # For secure file uploads (usually included with Flask)
 python-dotenv
